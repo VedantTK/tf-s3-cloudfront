@@ -161,7 +161,7 @@ resource "aws_s3_bucket_policy" "website_bucket_policy" {
 resource "aws_s3_object" "index_html" {
   bucket       = aws_s3_bucket.website_bucket.id
   key          = "index.html"
-  source       = "app/index.html"
+  source       = "index.html"
   content_type = "text/html"
 
   depends_on = [aws_s3_bucket.website_bucket]
