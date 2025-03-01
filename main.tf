@@ -13,6 +13,8 @@ terraform {
 
 provider "aws" {
   region = "us-east-1"
+  access_key = var.aws_access_key_id      # Use variable for AWS Access Key
+  secret_key = var.aws_secret_access_key  # Use variable for AWS Secret Key
 }
 
 # Random string to ensure bucket name uniqueness
