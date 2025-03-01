@@ -10,11 +10,14 @@ variable "aws_secret_access_key" {
   sensitive   = true
 }
 
-variable "tags" {
-  description = "Tags to apply to all resources"
-  type        = map(string)
-  default = {
-    Project   = "BrainPuzzleGames"
-    ManagedBy = "Terraform"
-  }
+variable "Project" {
+  description = "The project name for resource tagging"
+  type        = string
+  default     = "BrainPuzzleGames"
+}
+
+variable "ManagedBy" {
+  description = "The tool managing the resources"
+  type        = string
+  default     = "Terraform"
 }
